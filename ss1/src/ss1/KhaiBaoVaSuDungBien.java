@@ -1,4 +1,4 @@
-package bai1;
+package ss1;
 
 public class KhaiBaoVaSuDungBien {
     public static void main(String[] args) {

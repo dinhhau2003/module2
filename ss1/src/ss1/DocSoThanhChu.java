@@ -1,4 +1,4 @@
-package bai1;
+package ss1;
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class DocSoThanhChu {
                     case 6:
                     System.out.println("sáu");break;
                     case 7:
-                    System.out.println("bảy");break;  
+                    System.out.println("bảy");break;
                     case 8:
                     System.out.println("tám");break;
                     case 9:
