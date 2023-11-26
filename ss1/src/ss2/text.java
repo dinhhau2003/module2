@@ -1,63 +1,36 @@
 package ss2;
 import java.util.Scanner;
 public class text {
+
     public static void main(String[] args) {
-        int choice = -1;
-        Scanner input = new Scanner(System.in);
-        while (choice!=0){
-            System.out.println("Menu");
-            System.out.println("1. Draw the triangle");
-            System.out.println("2. Draw the square");
-            System.out.println("3. Draw the rectangle");
-            System.out.println("0. Exit");
-            System.out.println("Enter your choice: ");
-            choice=input.nextInt();
-            switch (choice){
-                case 1:
-                    System.out.println("Nhap vao m");
-                    int m=input.nextInt();
+        System.out.print("Nhập vào kích thước của mảng : ");
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        int[] arr = new int[size];
+        for (int i = 0; i < size    ; i++) {
+            System.out.print("Nhập số nguyên vào phần tử thứ " + i +" : ") ;
+            arr[i] = scanner.nextInt();
+        }
+        System.out.print("Mảng đã nhập : ");
 
-                    System.out.println("Nhap vao n");
-                    int n=input.nextInt();
-                    if(m>0&&n>0){
-                        for(int i=1;i<=m;i++){
-                            for(int j=1;j<=n;j++){
-                                System.out.print("*");
-                            }
-                            System.out.println();
-                        }
+        for (int x:arr) {
+            System.out.print(x + " ; ");
+        }
+        System.out.print("\nNhập vào phần tử cần chèn : ");
+        int element = scanner.nextInt();
+        System.out.print("\nNhập vào vị trí cần chèn : ");
+        int index = scanner.nextInt();
+        for (int i = size-1; i >index ; i--) {
+            arr[i] = arr[i-1];
+        }
+        arr[index] = element;
+        System.out.print("Mảng sau khi thêm  : ");
 
-                    } break;
-                case 2:
-                    System.out.println("Nhap vao h");
-                    int h=input.nextInt();
-                    if(h>0){
-                        for (int i=1;i<=h;i++){
-                            for(int j=1;j<=i;j++){
-                                System.out.print("*");
-
-                            }
-                            System.out.println();
-                        }
-                    } break;
-                case 3:
-                    System.out.print("Nhap vao h: ");
-                    int hh = input.nextInt();
-                    if(hh>0){
-                        for (int i=hh;i>=1;i--){
-                            for (int j=1; j<=i;j++){
-                                System.out.print("*");
-                            }
-                            System.out.println();
-                        }
-                    } break;
-
-                case 0:
-                    System.exit(0);
-
-            }
-
+        for (int x:arr) {
+            System.out.print(x + " ; ");
         }
     }
+    }
 
-}
+
+
