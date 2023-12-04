@@ -31,6 +31,15 @@ public class TongCacSoDuongCheoMaTran {
                 }
             }
         }
+        int total1 = 0;
+        for(int row = 0; row < arr.length; row++) {
+            for(int column = 0; column < arr[row].length; column++) {
+                if(row+column==arr.length-1){
+                    total1 += arr[row][column];
+                }
+            }
+        }
         System.out.println("Tong cac phan tu tren duong cheo chinh cua matrix = " + total);
+        System.out.println("Tong cac phan tu tren duong cheo chinh cua matrix = " + total1);
     }
 }
