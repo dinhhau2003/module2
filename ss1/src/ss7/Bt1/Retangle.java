@@ -1,6 +1,6 @@
 package ss7.Bt1;
 
-public class Retangle extends Shape {
+public class Retangle extends Shape implements Resizeable {
     private double width=1.0;
     private double length=1.0;
 
@@ -45,5 +45,11 @@ public class Retangle extends Shape {
         return " A Retangle width width= " + getWidth() +
                 ", and length=" + getLength() +
                 ", which is a subclass of "+super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.length *= (1 + percent / 100.0);
+        this.width *= (1 + percent / 100.0);
     }
 }
