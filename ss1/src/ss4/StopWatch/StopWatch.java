@@ -36,7 +36,7 @@ public class StopWatch {
     }
     public void start(){
         this.startTime=System.currentTimeMillis();
-        System.out.println();
+//        System.out.println();
     }
     public void stop(){
         this.endTime=System.currentTimeMillis();

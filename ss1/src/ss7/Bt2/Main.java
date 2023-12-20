@@ -13,5 +13,6 @@ public class Main {
             Colorable colorableShape = (Colorable) shape;
             colorableShape.howToColor();
         }
-    }}
+    }
+    }
 }
